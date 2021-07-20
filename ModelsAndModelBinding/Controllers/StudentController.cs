@@ -21,6 +21,9 @@ namespace ModelsAndModelBinding.Controllers
         [HttpPost] // After user posts form data
         public IActionResult Add(IFormCollection form)
         {
+
+            //Need server side validation for all data
+
             Student stu = new Student() 
             { 
                 FullName = form["full-name"],
@@ -28,6 +31,10 @@ namespace ModelsAndModelBinding.Controllers
                 Email = form["email"],
                 PhoneNumber = form["phone-number"]
             };
+
+            // Add to database
+
+            ViewData["Added"] = true;
             
             return View();
         }
