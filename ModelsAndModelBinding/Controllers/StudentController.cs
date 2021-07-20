@@ -39,8 +39,21 @@ namespace ModelsAndModelBinding.Controllers
             return View();
         }
 
+        // Updated ModelBinding Method
+        [HttpGet]
         public IActionResult AddWithBinding()
         {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult AddWithBinding(Student s)
+        {
+            if (ModelState.IsValid) //True if all Validation in Model passes
+            {
+                ViewData["Message"] = $"{s.FullName} was added with the ID of 4328719876";
+            }
+
+            // Add to database
             return View();
         }
     }
