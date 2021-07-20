@@ -7,23 +7,27 @@
     <h1>Add new Student</h1>
 
     <form method="post">
-        <label>Full Name: </label>
-        <input type="text" name="full-name" />
-        <br />
-
-        <label>Date of Birth: </label>
-        <input type="text" name="dob" />
-        <br />
-
-        <label>Email: </label>
-        <input type="text" name="email" />
-        <br />
-
-        <label>Phone Number: </label>
-        <input type="text" name="phone-number" />
-        <br />
-
-        <input type="submit" value="Add Student" />
+            <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" name="full-name" class="form-control" id="fullName">
+                <small id="fullNameHelp" class="form-text text-muted">Please enter your full legal name.</small>
+            </div>
+            <div class="form-group">
+                <label for="DateOfBirth">Date of Birth</label>
+                <input type="text" name="dob" class="form-control" id="DateOfBirth">
+                <small id="dobHelp" class="form-text text-muted">M/D/YYYY</small>
+            </div>
+            <div class="form-group">
+                <label for="email">Student Email</label>
+                <input type="text" name="email" class="form-control" id="email">
+                <small id="emailHelp" class="form-text text-muted">Enter your student email.</small>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="text" name="phone-number" class="form-control" id="phone">
+                <small id="phoneHelp" class="form-text text-muted">Enter your home phone number.</small>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Student</button>
     </form>
 }
 else
