@@ -34,7 +34,7 @@ namespace ModelsAndModelBinding.Controllers
 
             // Add to database
 
-            ViewData["Added"] = true;
+            ViewData["Added"] = stu.FullName + " was added with the ID of 4328719876";
             
             return View();
         }
