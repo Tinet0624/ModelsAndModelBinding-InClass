@@ -51,9 +51,9 @@ namespace ModelsAndModelBinding.Controllers
             if (ModelState.IsValid) //True if all Validation in Model passes
             {
                 ViewData["Message"] = $"{s.FullName} was added with the ID of 4328719876";
+                // Add to database here...
             }
 
-            // Add to database
             return View();
         }
     }
